@@ -12,12 +12,54 @@
 	.logo{
 		opacity: .75;
 }
-/*
-  .menu {
-    padding-top:4px;
-    opacity:.8;
+.btn {
+  margin-top: -40px;
+  margin-left: 10px;
+	width: 100px;
+	color: #ECE9E6;
+  font-family: "Lucida Console", Monaco, monospace;
+	font-size: 20px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(236, 233, 230, .95);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+	}
+  .sidenav a {
+   	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+  	font-size: 25px;
+  	color: #8F8D8D;
+  	display: block;
+  	transition:0.3s;
   }
-  */
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+  }
+  .close{
+    margin-top: -35px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #8F8D8D;
+    font-size: 20px;
+  }
+.btn:hover {
+	color: black;
+  opacity: .6;
+}
+.btn .btn-primary {
+	background-color:transparent;
+}
+
   .about {
     font-family: "Lucida Console", Monaco, monospace;
     margin-top: 175px;
@@ -66,15 +108,33 @@
 <body>
   <title>About</title>
 
-  <div class="menus">
+  <div class="menu">
     <center>
-      <a href="https://smokejaguar22.github.io"><img class = "logo" src="/Users/sidhumani22/Documents/GitHub/smokejaguar22.github.io/full_logo.ico" width="51" height="50"></a>
+      <a href="https://smokejaguar22.github.io/travis.html"><img class = "logo" src="/Users/sidhumani22/Documents/GitHub/smokejaguar22.github.io/full_logo.ico" width="51" height="50"></a>
     </center>
   </div>
 
   <div type="button" class="btn" value="menu">
     <span onclick="openNav()"><button type="button" class="btn btn-primary">MENU</button></span>
   </div>
+
+  <div id = "mySidenav" class = "sidenav">
+    	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <br>
+      <div class="close">
+      <center>
+      <br>
+      about
+      <br>
+      home
+      <br>
+      work
+      <br>
+      contact
+    </div>
+    </center>
+  </div>
+
 
   <div class="about">
     <center>
@@ -101,6 +161,16 @@
 </center>
   </div>
 </footer>
+
+<script>
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 
 </html>

@@ -27,8 +27,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #ECE9E6;
-    opacity: .95;
+    background-color: rgba(236, 233, 230, .95);
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -46,6 +45,12 @@
       top: 0;
       right: 25px;
       font-size: 36px;
+  }
+  .close{
+    margin-top: -35px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #8F8D8D;
+    font-size: 20px;
   }
 .btn:hover {
 	color: black;
@@ -114,8 +119,19 @@
   </div>
 
   <div id = "mySidenav" class = "sidenav">
-    <center>
     	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <br>
+      <div class="close">
+      <center>
+      <br>
+      about
+      <br>
+      home
+      <br>
+      work
+      <br>
+      contact
+    </div>
     </center>
   </div>
 
